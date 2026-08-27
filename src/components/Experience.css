@@ -1,0 +1,129 @@
+.timeline {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--border-strong);
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -1.75rem;
+  top: 1.55rem;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.exp-card {
+  padding: 1.6rem 1.7rem;
+}
+
+.exp-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.exp-type {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.exp-head h3 {
+  font-size: clamp(1.05rem, 2.4vw, 1.2rem);
+  font-weight: 600;
+  overflow-wrap: break-word;
+}
+
+.exp-head h3 span {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.exp-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+}
+
+.exp-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.exp-bullets {
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.exp-bullets li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.exp-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  .timeline {
+    padding-left: 1.35rem;
+  }
+
+  .timeline-marker {
+    left: -1.35rem;
+  }
+
+  .exp-card {
+    padding: 1.15rem 1rem;
+  }
+
+  .exp-meta {
+    font-size: 0.8rem;
+  }
+
+  .exp-bullets li {
+    font-size: 0.9rem;
+  }
+}

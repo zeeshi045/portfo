@@ -1,0 +1,53 @@
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0 1.75rem;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.footer-brand .logo-mark {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--text);
+  color: var(--bg);
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.footer-brand p,
+.footer-copy {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-right {
+  display: flex;
+  gap: 0.4rem;
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
+  }
+}
